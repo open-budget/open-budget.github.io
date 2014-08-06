@@ -1,0 +1,35 @@
+{% assign sorted_pages = site.pages | sort:"weight" %}
+
+<div id="ob-primary-menu">
+    <div class="ob-close">×</div>
+    <div class="ob-menu">
+        <ul class="ob-primary">
+            {% for section in sorted_pages %}
+                {% if section.primary %}
+                    <li {% if page.url == section.url %}class="active"{% endif %}>
+                        <a href="{{ section.url }}">{{ section.title }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <ul class="ob-secondary">
+            {% for section in sorted_pages %}
+                {% if section.secondary %}
+                    <li {% if page.url == section.url %}class="active"{% endif %}>
+                        <a href="{{ section.url }}">{{ section.title }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <div id="ob-menu-plast">
+            <a href="http://www.plast.org.ua" target="_blank">
+                {% include plast.svg %}
+            </a>
+            <div class="ob-plast-link">
+                Ми підтримуємо <a href="http://www.plast.org.ua" target="_blank">Пласт</a> &mdash; національну скаутську організацію України
+            </div>
+        </div>
+    </div>
+</div>

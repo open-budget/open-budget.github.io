@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+{% include head.html %}
 
-    <body>
+<body>
 
-    <div class="page-content">
-      <div class="wrap">
-      {{ content }}
-      </div>
+    <div id="ob-main-logo">
+        {{ site.title }}
     </div>
 
-    </body>
+    <div id="ob-main-line"></div>
+
+    <div id="ob-menu-toggler">
+        <span>
+            <ul class="ob-page-menu">
+                <li><a href="#/help">допомога</a></li>
+                <li class="ob-primary-menu-toggler">меню</li>
+            </ul>
+        </span>
+        <div class="ob-stripes ob-primary-menu-toggler">
+            <div class="ob-stripe"></div>
+            <div class="ob-stripe"></div>
+            <div class="ob-stripe"></div>
+        </div>
+    </div>
+
+    {% include menu.html %}
+
+    <!-- {{ content }} -->
+
+</body>
 </html>
