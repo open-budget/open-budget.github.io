@@ -1,0 +1,12 @@
+# Site settings
+title: Відкритий бюджет
+email: mail@open-budget.org
+description: ""
+baseurl: ""
+url: "http://open-budget.org"
+twitter_username: open-budget
+github_username:  open-budget
+
+# Build settings
+markdown: kramdown
+permalink: pretty
