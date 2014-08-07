@@ -1,0 +1,35 @@
+#area {
+  font-family: 'PT Sans';
+  position: absolute;
+  top: 30px;
+  left: 5%;
+  width: 250px; }
+  #area .icon {
+    float: left;
+    margin-right: 20px; }
+    #area .icon img {
+      width: 42px; }
+  #area .name {
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1.1em;
+    color: #333;
+    margin-top: 2px; }
+
+#partition {
+  width: 1000px;
+  margin: 20px auto 0;
+  font-family: 'PT Sans';
+  font-weight: normal; }
+  #partition circle {
+    fill: none;
+    pointer-events: all; }
+    #partition circle b {
+      padding: 0; }
+    #partition circle, #partition circle path {
+      cursor: pointer; }
+  #partition text {
+    font-size: .7em;
+    color: #333; }
+  #partition polyline {
+    opacity:.8;stroke:#777;stroke-width:1px;fill:none}#partition-description{font-family:'PT Sans';font-weight:normal;text-align:center;position:absolute;left:50%;width:200px;top:0;margin:315px 0 0 -100px}#partition-description .summary{font-size:1.8em}#partition-description .summary span.symbol{font-size:.8em}#partition-description .horizontal-line{width:100px;height:1px;background:#ccc;margin:10px auto}#partition-description .code-name{font-size:.8em}

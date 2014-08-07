@@ -1,0 +1,9 @@
+{
+    "name": "partition",
+    "version": "0.0.1",
+    "dependencies": {
+        "d3":            "3.4.8",
+        "jasmine":       "2.0.0",
+        "karma-jasmine": "0.2.2"
+    }
+}

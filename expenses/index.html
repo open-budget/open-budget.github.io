@@ -5,4 +5,31 @@ weight: 1
 primary: true
 ---
 
-<h2>Incomes and expenses</h2>
+<link rel="stylesheet" href="{{ "/expenses/build/partition.css" | prepend: site.baseurl }}">
+
+<div id="area">
+    <div class="icon">
+        <img src="assets/images/8.png" alt="Івано-Франківська область"/>
+    </div>
+    <div class="name">Івано-Франківська область</div>
+</div>
+
+<div id="partition"></div>
+
+<div id="partition-description">
+    <div class="summary">
+        <span class="total">14,000,000</span>
+        <span class="symbol">&#8372;</span>
+    </div>
+    <div class="horizontal-line"></div>
+    <div class="code-name">Вищий спеціалізований суд України з розгляду цивільних і кримінальних справ</div>
+</div>
+
+<script src="{{ "/expenses/bower_components/d3/d3.js" | prepend: site.baseurl }}" charset="utf-8"></script>
+<script src="{{ "/expenses/build/partition.js" | prepend: site.baseurl }}" charset="utf-8"></script>
+
+<script>
+    window.addEventListener("load", function () {
+        Partition.draw();
+    });
+</script>
