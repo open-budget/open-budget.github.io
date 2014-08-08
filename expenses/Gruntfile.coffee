@@ -1,4 +1,5 @@
 module.exports = (grunt) ->
+
     grunt.initConfig
         pkg: grunt.file.readJSON("package.json")
 
@@ -7,12 +8,12 @@ module.exports = (grunt) ->
                 livereload: false
 
             scss:
-                files: ["src/partition.scss"]
-                task: ["sass"]
+                files: "src/*.scss"
+                tasks: "sass"
 
             coffee:
                 files: "src/*.coffee"
-                tasks: ["coffee"]
+                tasks: "coffee"
 
         sass:
             dist:
