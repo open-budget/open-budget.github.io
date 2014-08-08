@@ -6,6 +6,7 @@ primary: true
 ---
 
 <link rel="stylesheet" href="{{ "/expenses/build/partition.css" | prepend: site.baseurl }}">
+<script src="{{ "/expenses/build/partition.js" | prepend: site.baseurl }}" charset="utf-8"></script>
 
 <div id="area">
     <div class="icon">
@@ -24,9 +25,6 @@ primary: true
     <div class="horizontal-line"></div>
     <div class="code-name">Вищий спеціалізований суд України з розгляду цивільних і кримінальних справ</div>
 </div>
-
-<script src="{{ "/expenses/bower_components/d3/d3.js" | prepend: site.baseurl }}" charset="utf-8"></script>
-<script src="{{ "/expenses/build/partition.js" | prepend: site.baseurl }}" charset="utf-8"></script>
 
 <script>
     window.addEventListener("load", function () {
