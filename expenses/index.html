@@ -43,35 +43,34 @@ primary: true
     </div>
 </div>
 
-<script>
-    window.addEventListener("load", function () {
-        Partition.draw();
-    });
+<script type="text/javascript">
+    (function () {
 
-; (function () {
+        var q = function (path) {
+            return document.querySelector(path);
+        };
 
-    var q = function (path) {
-        return document.querySelector(path);
-    };
+        window.addEventListener("load", function () {
 
-    window.addEventListener("load", function () {
+            // initializing partition
+            Partition.draw();
 
-        // partition <-> selector toggle
-        q("#ob-button").addEventListener("click", function () {
-            var partition = q("#ob-expenses-partition"),
-                newClass,
-                wording;
+            // partition <-> selector toggle 
+            q("#ob-button").addEventListener("click", function () {
+                var partition = q("#ob-expenses-partition"),
+                    newClass,
+                    wording;
 
-            if (/selector/.test(partition.className)) {
-                newClass = "partition";
-                wording = "налаштування";
-            } else {
-                newClass = "selector";
-                wording = "витрати";
-            }
-            partition.className = this.className = newClass;
-            this.querySelector("p").innerHTML = wording;
+                if (/selector/.test(partition.className)) {
+                    newClass = "partition";
+                    wording = "налаштування";
+                } else {
+                    newClass = "selector";
+                    wording = "витрати";
+                }
+                partition.className = this.className = newClass;
+                this.querySelector("p").innerHTML = wording;
+            });
         });
-    });
-}());
+    }());
 </script>

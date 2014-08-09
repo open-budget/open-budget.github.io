@@ -39,6 +39,7 @@
 }
 #ob-expenses-partition #ob-button:hover {
   border-color: dodgerblue;
+  background: none;
 }
 #ob-expenses-partition #ob-button:hover p {
   color: dodgerblue;
