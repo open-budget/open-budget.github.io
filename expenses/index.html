@@ -8,26 +8,70 @@ primary: true
 <link rel="stylesheet" href="{{ "/expenses/build/partition.css" | prepend: site.baseurl }}">
 <script src="{{ "/expenses/build/partition.js" | prepend: site.baseurl }}" charset="utf-8"></script>
 
-<div id="area">
-    <div class="icon">
-        <img src="assets/images/8.png" alt="Івано-Франківська область"/>
+<div id="ob-expenses-partition">
+    <div id="ob-button" class="partition">
+        <p>налаштування</p>
     </div>
-    <div class="name">Івано-Франківська область</div>
-</div>
+    <div id="ob-partition">
 
-<div id="partition"></div>
+        <!-- partition -->
 
-<div id="partition-description">
-    <div class="summary">
-        <span class="total">14,000,000</span>
-        <span class="symbol">&#8372;</span>
+        <div id="area">
+            <div class="icon">
+                <img src="assets/images/8.png" alt="Івано-Франківська область"/>
+            </div>
+            <div class="name">Івано-Франківська область</div>
+        </div>
+
+        <div id="partition"></div>
+
+        <div id="partition-description">
+            <div class="summary">
+                <span class="total">14,000,000</span>
+                <span class="symbol">&#8372;</span>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="code-name">Вищий спеціалізований суд України з розгляду цивільних і кримінальних справ</div>
+        </div>
+
+        <!-- partition end -->
     </div>
-    <div class="horizontal-line"></div>
-    <div class="code-name">Вищий спеціалізований суд України з розгляду цивільних і кримінальних справ</div>
+    <div id="ob-selector">
+        <!-- selectors -->
+
+        <!-- selectors end -->
+    </div>
 </div>
 
 <script>
     window.addEventListener("load", function () {
         Partition.draw();
     });
+
+; (function () {
+
+    var q = function (path) {
+        return document.querySelector(path);
+    };
+
+    window.addEventListener("load", function () {
+
+        // partition <-> selector toggle
+        q("#ob-button").addEventListener("click", function () {
+            var partition = q("#ob-expenses-partition"),
+                newClass,
+                wording;
+
+            if (/selector/.test(partition.className)) {
+                newClass = "partition";
+                wording = "налаштування";
+            } else {
+                newClass = "selector";
+                wording = "витрати";
+            }
+            partition.className = this.className = newClass;
+            this.querySelector("p").innerHTML = wording;
+        });
+    });
+}());
 </script>
