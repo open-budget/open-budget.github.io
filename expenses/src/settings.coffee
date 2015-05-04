@@ -9,7 +9,7 @@ class Settings
 
     @radius = Math.min(@.margin.top, @.margin.bottom, @.margin.right, @.margin.left) - 10
 
-    @url = "https://api.open-budget.org/v1/expenses.json?area_id=0&year=2014"
+    @url = "http://api.open-budget.org/v1/expenses.json?area_id=0&year=2014"
 
     @byDefault =
         0: [

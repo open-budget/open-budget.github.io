@@ -423,7 +423,7 @@ Settings = (function() {
 
   Settings.radius = Math.min(Settings.margin.top, Settings.margin.bottom, Settings.margin.right, Settings.margin.left) - 10;
 
-  Settings.url = "https://api.open-budget.org/v1/expenses.json?area_id=0&year=2014";
+  Settings.url = "http://api.open-budget.org/v1/expenses.json?area_id=0&year=2014";
 
   Settings.byDefault = {
     0: ["0110000", "0300000", "0410000", "0500000", "0600000", "0650000", "0700000", "0750000", "0800000", "0900000", "3100000"]

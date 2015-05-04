@@ -45,18 +45,13 @@ primary: true
 
 <script type="text/javascript">
     (function () {
-
-        var q = function (path) {
-            return document.querySelector(path);
-        };
-
         window.addEventListener("load", function () {
 
             // initializing partition
             Partition.draw();
 
             // partition <-> selector toggle 
-            q("#ob-button").addEventListener("click", function () {
+            document.querySelector("#ob-button").addEventListener("click", function () {
                 var partition = q("#ob-expenses-partition"),
                     newClass,
                     wording;
